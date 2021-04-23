@@ -56,15 +56,47 @@
 		696F823C2632F69D00C6022F /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				696F82532632FB7E00C6022F /* Model */,
+				696F82552632FB8C00C6022F /* Controller */,
+				696F82542632FB8600C6022F /* View */,
+				696F82562632FBAE00C6022F /* Supporting Files */,
+			);
+			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		696F82532632FB7E00C6022F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		696F82542632FB8600C6022F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				696F82432632F69D00C6022F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		696F82552632FB8C00C6022F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				696F82412632F69D00C6022F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		696F82562632FBAE00C6022F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				696F82462632F69E00C6022F /* Assets.xcassets */,
 				696F823D2632F69D00C6022F /* AppDelegate.swift */,
 				696F823F2632F69D00C6022F /* SceneDelegate.swift */,
-				696F82412632F69D00C6022F /* ViewController.swift */,
-				696F82432632F69D00C6022F /* Main.storyboard */,
-				696F82462632F69E00C6022F /* Assets.xcassets */,
 				696F82482632F69E00C6022F /* LaunchScreen.storyboard */,
 				696F824B2632F69E00C6022F /* Info.plist */,
 			);
-			path = Instagrid;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Instagrid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +328,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.buewaertromain.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Instagrid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.buewaertromain.Instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
