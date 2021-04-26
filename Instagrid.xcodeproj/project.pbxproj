@@ -13,6 +13,8 @@
 		696F82452632F69D00C6022F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696F82432632F69D00C6022F /* Main.storyboard */; };
 		696F82472632F69E00C6022F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696F82462632F69E00C6022F /* Assets.xcassets */; };
 		696F824A2632F69E00C6022F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696F82482632F69E00C6022F /* LaunchScreen.storyboard */; };
+		69701A902636BAAC00079B79 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69701A8F2636BAAC00079B79 /* Delm-Medium.otf */; };
+		69701A932636BAB600079B79 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69701A922636BAB600079B79 /* ThirstySoftRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		696F82462632F69E00C6022F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		696F82492632F69E00C6022F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696F824B2632F69E00C6022F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69701A8F2636BAAC00079B79 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Delm-Medium.otf"; path = "../../../Input/Delm-Medium.otf"; sourceTree = "<group>"; };
+		69701A922636BAB600079B79 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ThirstySoftRegular.otf; path = ../../../Input/ThirstySoftRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				696F823D2632F69D00C6022F /* AppDelegate.swift */,
 				696F823F2632F69D00C6022F /* SceneDelegate.swift */,
 				696F82482632F69E00C6022F /* LaunchScreen.storyboard */,
+				69701A8F2636BAAC00079B79 /* Delm-Medium.otf */,
+				69701A922636BAB600079B79 /* ThirstySoftRegular.otf */,
 				696F824B2632F69E00C6022F /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -158,6 +164,8 @@
 			files = (
 				696F824A2632F69E00C6022F /* LaunchScreen.storyboard in Resources */,
 				696F82472632F69E00C6022F /* Assets.xcassets in Resources */,
+				69701A932636BAB600079B79 /* ThirstySoftRegular.otf in Resources */,
+				69701A902636BAAC00079B79 /* Delm-Medium.otf in Resources */,
 				696F82452632F69D00C6022F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
