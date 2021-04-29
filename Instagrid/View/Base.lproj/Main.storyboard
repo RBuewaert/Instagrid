@@ -48,11 +48,17 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
                                                         <state key="selected" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fe8-9N-hLw"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecQ-yr-DGa">
                                                         <rect key="frame" x="172" y="0.0" width="162" height="162"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vkg-8h-ScK"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -63,11 +69,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DOe-fB-FfT"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-dD-Xte">
                                                         <rect key="frame" x="172" y="0.0" width="162" height="162"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
+                                                        <connections>
+                                                            <action selector="addPhoto4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pie-sq-PsW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -94,6 +106,9 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="tapeLayout1P:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPm-6t-f6S"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjz-mL-BpN">
                                         <rect key="frame" x="137" y="0.0" width="80" height="80"/>
@@ -103,6 +118,9 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 2"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="tapeLayout2P:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gLn-EG-phX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pke-t6-jb6">
                                         <rect key="frame" x="274" y="0.0" width="80" height="80"/>
@@ -112,6 +130,9 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="tapeLayout3P:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TfE-o7-BZV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -159,6 +180,9 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 1"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="tapeLayout1L:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sIH-SJ-npR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBS-fA-Npq">
                                         <rect key="frame" x="0.0" y="116.5" width="80" height="80"/>
@@ -168,6 +192,9 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 2"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="tapeLayout2L:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ib8-qM-h3I"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkl-cU-nPz">
                                         <rect key="frame" x="0.0" y="233" width="80" height="80"/>
@@ -177,6 +204,9 @@
                                         </constraints>
                                         <state key="normal" backgroundImage="Layout 3"/>
                                         <state key="selected" image="Selected"/>
+                                        <connections>
+                                            <action selector="tapeLayout3L:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K8d-Ar-A7a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -257,14 +287,12 @@
                                 <exclude reference="yJh-NQ-g6j"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Bxl-aY-OMc"/>
-                                <exclude reference="OeI-H1-b5v"/>
+                                <exclude reference="0u1-qB-WKR"/>
+                                <exclude reference="Iyp-S5-DR8"/>
                                 <exclude reference="Jda-9K-eXE"/>
                                 <exclude reference="Tph-aP-wOR"/>
                                 <exclude reference="amy-9d-6oa"/>
                                 <exclude reference="hl6-NG-7uU"/>
-                                <exclude reference="0u1-qB-WKR"/>
-                                <exclude reference="Iyp-S5-DR8"/>
                                 <exclude reference="C8J-QB-Z9n"/>
                                 <exclude reference="TYv-hf-n8t"/>
                                 <exclude reference="jJP-Cy-GsP"/>
@@ -273,6 +301,8 @@
                                 <exclude reference="ok6-gm-9Fy"/>
                                 <exclude reference="O6I-ON-dcD"/>
                                 <exclude reference="gis-A1-AG4"/>
+                                <exclude reference="Bxl-aY-OMc"/>
+                                <exclude reference="OeI-H1-b5v"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -281,10 +311,10 @@
                                 <include reference="6DP-zn-vbf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="amy-9d-6oa"/>
-                                <include reference="hl6-NG-7uU"/>
                                 <include reference="0u1-qB-WKR"/>
                                 <include reference="Iyp-S5-DR8"/>
+                                <include reference="amy-9d-6oa"/>
+                                <include reference="hl6-NG-7uU"/>
                                 <include reference="TYv-hf-n8t"/>
                                 <include reference="ok6-gm-9Fy"/>
                                 <include reference="O6I-ON-dcD"/>
@@ -297,17 +327,27 @@
                                 <include reference="yJh-NQ-g6j"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Bxl-aY-OMc"/>
-                                <include reference="OeI-H1-b5v"/>
                                 <include reference="Jda-9K-eXE"/>
                                 <include reference="Tph-aP-wOR"/>
                                 <include reference="C8J-QB-Z9n"/>
                                 <include reference="jJP-Cy-GsP"/>
                                 <include reference="lMV-nm-31u"/>
                                 <include reference="mf3-5G-8n4"/>
+                                <include reference="Bxl-aY-OMc"/>
+                                <include reference="OeI-H1-b5v"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bottomPicture" destination="ya0-dD-Xte" id="Glu-g0-n2v"/>
+                        <outlet property="layout1L" destination="8An-M8-GEV" id="3NO-uG-wdc"/>
+                        <outlet property="layout1P" destination="sIm-l2-268" id="NoE-7C-qtr"/>
+                        <outlet property="layout2L" destination="vBS-fA-Npq" id="nrg-Aa-PhI"/>
+                        <outlet property="layout2P" destination="Sjz-mL-BpN" id="Jhq-rm-Hj2"/>
+                        <outlet property="layout3L" destination="qkl-cU-nPz" id="Xsb-Yz-sr5"/>
+                        <outlet property="layout3P" destination="Pke-t6-jb6" id="ZlQ-aa-3CK"/>
+                        <outlet property="topPicture" destination="ecQ-yr-DGa" id="YOJ-5Q-iCA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,10 +357,10 @@
     <resources>
         <image name="Arrow Left" width="9.5" height="13.5"/>
         <image name="Arrow Up" width="13.5" height="9.5"/>
-        <image name="Layout 1" width="27" height="27"/>
-        <image name="Layout 2" width="27" height="27"/>
-        <image name="Layout 3" width="27" height="27"/>
+        <image name="Layout 1" width="80" height="80"/>
+        <image name="Layout 2" width="80" height="80"/>
+        <image name="Layout 3" width="80" height="80"/>
         <image name="Plus" width="50" height="50"/>
-        <image name="Selected" width="27" height="27"/>
+        <image name="Selected" width="80" height="80"/>
     </resources>
 </document>
