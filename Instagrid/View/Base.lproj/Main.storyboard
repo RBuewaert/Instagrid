@@ -47,7 +47,6 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Plus"/>
-                                                        <state key="selected" image="Plus"/>
                                                         <connections>
                                                             <action selector="addPhoto1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fe8-9N-hLw"/>
                                                         </connections>
@@ -339,14 +338,17 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="bottomPicture" destination="ya0-dD-Xte" id="Glu-g0-n2v"/>
                         <outlet property="layout1L" destination="8An-M8-GEV" id="3NO-uG-wdc"/>
                         <outlet property="layout1P" destination="sIm-l2-268" id="NoE-7C-qtr"/>
                         <outlet property="layout2L" destination="vBS-fA-Npq" id="nrg-Aa-PhI"/>
                         <outlet property="layout2P" destination="Sjz-mL-BpN" id="Jhq-rm-Hj2"/>
                         <outlet property="layout3L" destination="qkl-cU-nPz" id="Xsb-Yz-sr5"/>
                         <outlet property="layout3P" destination="Pke-t6-jb6" id="ZlQ-aa-3CK"/>
-                        <outlet property="topPicture" destination="ecQ-yr-DGa" id="YOJ-5Q-iCA"/>
+                        <outlet property="mainView" destination="h8C-f8-3KX" id="CyO-T8-6HE"/>
+                        <outlet property="photo1" destination="75I-yK-3oR" id="rPA-wa-zSQ"/>
+                        <outlet property="photo2" destination="ecQ-yr-DGa" id="VRA-L1-dRF"/>
+                        <outlet property="photo3" destination="Og2-uv-xaS" id="2jc-fD-BGM"/>
+                        <outlet property="photo4" destination="ya0-dD-Xte" id="8Dn-hA-pDj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
