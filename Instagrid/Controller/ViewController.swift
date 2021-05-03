@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        selectLayout1()
+        selectLayout(withPortraitButton: layout1P, withLandscapeButton: layout1L, topViewIshidden: true, bottomViewIsHidden: false)
     }
     
     @IBOutlet weak var mainView: UIView!
@@ -31,27 +31,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var layout3L: UIButton!
     
     @IBAction func tapeLayout1P(_ sender: Any) {
-        selectLayout1()
+        selectLayout(withPortraitButton: layout1P, withLandscapeButton: layout1L, topViewIshidden: true, bottomViewIsHidden: false)
     }
     
     @IBAction func tapeLayout2P(_ sender: Any) {
-        selectLayout2()
+        selectLayout(withPortraitButton: layout2P, withLandscapeButton: layout2L, topViewIshidden: false, bottomViewIsHidden: true)
     }
     
     @IBAction func tapeLayout3P(_ sender: Any) {
-        selectLayout3()
+        selectLayout(withPortraitButton: layout3P, withLandscapeButton: layout3L, topViewIshidden: false, bottomViewIsHidden: false)
     }
     
     @IBAction func tapeLayout1L(_ sender: Any) {
-        selectLayout1()
+        selectLayout(withPortraitButton: layout1P, withLandscapeButton: layout1L, topViewIshidden: true, bottomViewIsHidden: false)
     }
     
     @IBAction func tapeLayout2L(_ sender: Any) {
-        selectLayout2()
+        selectLayout(withPortraitButton: layout2P, withLandscapeButton: layout2L, topViewIshidden: false, bottomViewIsHidden: true)
     }
     
     @IBAction func tapeLayout3L(_ sender: Any) {
-        selectLayout3()
+        selectLayout(withPortraitButton: layout3P, withLandscapeButton: layout3L, topViewIshidden: false, bottomViewIsHidden: false)
     }
     
     @IBAction func addPhoto1(_ sender: UIButton) {
@@ -76,7 +76,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var choosedlmage: UIImage!
     
-    func changeImage() {
+    func selectLayout(withPortraitButton: UIButton, withLandscapeButton: UIButton, topViewIshidden: Bool, bottomViewIsHidden: Bool) {
+        let buttons = [layout1P, layout1L, layout2P, layout2L, layout3P, layout3L]
+        for button in buttons {
+            button!.isSelected = false
+        }
+        withPortraitButton.isSelected = true
+        withLandscapeButton.isSelected = true
+        if topViewIshidden == true {
+            photo2.isHidden = true
+        } else {
+            photo2.isHidden = false
+        }
+        if bottomViewIsHidden == true {
+            photo4.isHidden = true
+        } else {
+            photo4.isHidden = false
+        }
+    }
+    
+    private func changeImage() {
         if photo1.isSelected == true {
             photo1.setImage(choosedlmage, for: .normal)
             photo1.isSelected = false
@@ -131,37 +150,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func selectLayout1() {
-        layout1P.isSelected = true
-        layout1L.isSelected = true
-        layout2P.isSelected = false
-        layout2L.isSelected = false
-        layout3P.isSelected = false
-        layout3L.isSelected = false
-        photo2.isHidden = true
-        photo4.isHidden = false
+    func swipeToShare() {
+        
+        
+        
     }
     
-    func selectLayout2() {
-        layout1P.isSelected = false
-        layout1L.isSelected = false
-        layout2P.isSelected = true
-        layout2L.isSelected = true
-        layout3P.isSelected = false
-        layout3L.isSelected = false
-        photo2.isHidden = false
-        photo4.isHidden = true
-    }
     
-    func selectLayout3() {
-        layout1P.isSelected = false
-        layout1L.isSelected = false
-        layout2P.isSelected = false
-        layout2L.isSelected = false
-        layout3P.isSelected = true
-        layout3L.isSelected = true
-        photo2.isHidden = false
-        photo4.isHidden = false
-    }
+   
 }
 
