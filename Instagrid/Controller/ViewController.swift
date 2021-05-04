@@ -13,6 +13,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         selectLayout(withPortraitButton: layout1P, withLandscapeButton: layout1L, topViewIshidden: true, bottomViewIsHidden: false)
+        
+        // Swipe for Portrait orientation
+        let leftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
+        leftSwipeGestureRecognizer.direction = .left
+        mainView.addGestureRecognizer(leftSwipeGestureRecognizer)
+        
+        // Swipe for Landscape orientation
+        let upSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
+        upSwipeGestureRecognizer.direction = .up
+        mainView.addGestureRecognizer(upSwipeGestureRecognizer)
+        
     }
     
     @IBOutlet weak var mainView: UIView!
@@ -55,22 +66,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func addPhoto1(_ sender: UIButton) {
-        photo1.isSelected = true
+        sender.isSelected = true
         chooseImage()
     }
     
     @IBAction func addPhoto2(_ sender: UIButton) {
-        photo2.isSelected = true
+        sender.isSelected = true
         chooseImage()
     }
     
     @IBAction func addPhoto3(_ sender: UIButton) {
-        photo3.isSelected = true
+        sender.isSelected = true
         chooseImage()
     }
     
     @IBAction func addPhoto4(_ sender: UIButton) {
-        photo4.isSelected = true
+        sender.isSelected = true
         chooseImage()
     }
     
@@ -150,11 +161,186 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func swipeToShare() {
+    @objc func swipeToShare(_ sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            let screenHeight = UIScreen.main.bounds.height
+            let screenWidth = UIScreen.main.bounds.width
+            if UIDevice.current.orientation.isPortrait {
+                let translation = CGAffineTransform(translationX: 0, y: -screenHeight)
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.mainView.transform = translation
+                }, completion: { (success) in
+                    if success {
+                        self.launchUIActivityController()
+                    }
+                })
+
+            } else if UIDevice.current.orientation.isLandscape {
+                let translation = CGAffineTransform(translationX: -screenWidth, y: 0)
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.mainView.transform = translation
+                }, completion: { (success) in
+                    if success {
+                        self.launchUIActivityController()
+                    }
+                })
+
+            } else {
+            }
+        }
+    }
+    
+    
+    
+    
+
         
+    private func launchUIActivityController() {
         
+        if let imageToShare = imageWithView(view: mainView) {
+            let activityViewController = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+        UIView.animate(withDuration: 1, animations: {
+            self.mainView.transform = .identity
+        }, completion: nil)
         
     }
+    
+    private func imageWithView(view: UIView) -> UIImage? {
+            UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+            let img = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return img
+        }
+        
+        
+        
+//        switch orientation {
+//        case .portrait:
+//            gesture.direction = .up
+//            mainView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height)
+//
+//
+//        case .landscapeLeft, .landscapeRight:
+//            gesture.direction = .left
+//            mainView.transform = CGAffineTransform(translationX: -UIScreen.main.bounds.width, y: 0)
+//
+//
+//        default:
+//            break
+//        }
+        
+//        private func transformQuestionViewWith(gesture: UIPanGestureRecognizer){
+//            let translation = gesture.translation(in: questionView)
+//            let translationTransform = CGAffineTransform(translationX: translation.x, y: translation.y)
+//
+//            let translationPercent = translation.x / (UIScreen.main.bounds.width / 2)
+//            let rotationAngle = (CGFloat.pi / 3) * translationPercent
+//            let rotationTransform = CGAffineTransform(rotationAngle: rotationAngle)
+//
+//            let transform = translationTransform.concatenating(rotationTransform)
+//            questionView.transform = transform
+//
+//            if translation.x > 0 {
+//                questionView.style = .correct
+//            } else {
+//                questionView.style = .incorrect
+//            }
+//        }
+//
+        
+
+    
+    
+    
+    
+//    EXEMPLE MOINS INTERTESSANT
+//    @objc func upSwipeToShare(_ sender: UISwipeGestureRecognizer) {
+//        switch sender.state {
+//        case .began, .changed :
+//            upTransformMainViewWith(gesture: sender)
+//        case .ended, .cancelled:
+//            launchUIActivityController()
+//        default:
+//            break
+//        }
+//    }
+//
+//    private func upTransformMainViewWith(gesture: UISwipeGestureRecognizer) {
+//        let translation = gesture.direction
+//
+//    }
+    
+    
+    
+    
+    
+//EXEMPLE VIDEO YOUTUBE
+//@objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+//
+//        if (sender.direction == .left) {
+//            print("Swipe Left")
+//            let labelPosition = CGPoint(x: self.swipeLabel.frame.origin.x - 50.0, y: self.swipeLabel.frame.origin.y)
+//            swipeLabel.frame = CGRect(x: labelPosition.x, y: labelPosition.y, width: self.swipeLabel.frame.size.width, height: self.swipeLabel.frame.size.height)
+//        }
+//
+//        if (sender.direction == .right) {
+//            print("Swipe Right")
+//            let labelPosition = CGPoint(x: self.swipeLabel.frame.origin.x + 50.0, y: self.swipeLabel.frame.origin.y)
+//            swipeLabel.frame = CGRect(x: labelPosition.x, y: labelPosition.y, width: self.swipeLabel.frame.size.width, height: self.swipeLabel.frame.size.height)
+//        }
+//    }
+    
+
+
+
+
+
+
+//question avec 2 sol proposées
+
+//// swipe left
+//let left = UISwipeGestureRecognizer(target: self, action: #selector(swipe))
+//left.direction = .left
+//self.swipeUp.addGestureRecognizer(left)
+//
+//
+//@objc private func swipe() {
+//    guard UIDevice.current.orientation == .landscapeLeft else {
+//        return
+//    }
+//    // your code
+//}
+
+
+
+
+//class ViewController: UIViewController, UIGestureRecognizerDelegate {
+//
+//    func viewDidLoad() {
+//        super.viewDidLoad()
+//        let left = UISwipeGestureRecognizer(target: self, action:#selector(swipe))
+//        left.direction = .left
+//        self.swipeUp.addGestureRecognizer(left)
+//    }
+//
+//    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+//        let gesture = gestureRecognizer as? UISwipeGestureRecognizer
+//
+//        switch uidevice.orientation {
+//            case .portrait: return gesture.direction == .up
+//            case .landscape: return gesture.direction == .left
+//            default : return false
+//        }
+//    }
+//}
+    
+    
+    
+    
     
     
    
