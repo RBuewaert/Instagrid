@@ -23,21 +23,65 @@
                                     <constraint firstAttribute="width" constant="180" id="rkB-HT-aey"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="HgU-kv-pl6">
+                                <rect key="frame" x="78" y="124" width="258" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ck9-Ha-fcm"/>
+                                    <constraint firstAttribute="height" constant="80" id="muJ-Wg-NdU"/>
+                                    <constraint firstAttribute="width" secondItem="HgU-kv-pl6" secondAttribute="height" multiplier="100:31" id="vXr-oE-Dzl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ck9-Ha-fcm"/>
+                                        <exclude reference="muJ-Wg-NdU"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ck9-Ha-fcm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="muJ-Wg-NdU"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71764707569999997" green="0.84313726430000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="HgU-kv-pl6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="7bc-mb-ICk"/>
                             <constraint firstItem="fIY-jA-BLA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ycm-er-I7s"/>
                             <constraint firstItem="fIY-jA-BLA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="edz-OM-One"/>
+                            <constraint firstItem="HgU-kv-pl6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nNP-Kr-Csd"/>
+                            <constraint firstItem="HgU-kv-pl6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="xi1-wd-G1C"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7bc-mb-ICk"/>
+                                <exclude reference="xi1-wd-G1C"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="xi1-wd-G1C"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="7bc-mb-ICk"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
         <image name="Icon" width="180" height="180"/>
+        <image name="Instagrid" width="100" height="31"/>
     </resources>
 </document>
