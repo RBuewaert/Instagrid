@@ -231,24 +231,24 @@
                                     <mask key="constraints">
                                         <exclude reference="a8l-um-1SX"/>
                                         <exclude reference="blL-hD-fiN"/>
-                                        <exclude reference="AzW-uK-Ax0"/>
-                                        <exclude reference="CWk-7J-hWq"/>
                                         <exclude reference="Ll2-ev-UGX"/>
                                         <exclude reference="gSx-Bb-dbT"/>
+                                        <exclude reference="AzW-uK-Ax0"/>
+                                        <exclude reference="CWk-7J-hWq"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
                                         <include reference="blL-hD-fiN"/>
-                                        <include reference="CWk-7J-hWq"/>
                                         <include reference="gSx-Bb-dbT"/>
+                                        <include reference="CWk-7J-hWq"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="a8l-um-1SX"/>
-                                        <include reference="AzW-uK-Ax0"/>
                                         <include reference="Ll2-ev-UGX"/>
+                                        <include reference="AzW-uK-Ax0"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -324,16 +324,12 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="arrowToShare" destination="ATU-Xl-ara" id="QS6-Bh-arL"/>
                         <outlet property="layout1" destination="sIm-l2-268" id="e8b-OV-b4A"/>
                         <outlet property="layout2" destination="Sjz-mL-BpN" id="3rc-er-OKz"/>
                         <outlet property="layout3" destination="Pke-t6-jb6" id="RRS-sr-e0I"/>
                         <outlet property="mainView" destination="h8C-f8-3KX" id="CyO-T8-6HE"/>
-                        <outlet property="photo1" destination="75I-yK-3oR" id="rPA-wa-zSQ"/>
                         <outlet property="photo2" destination="ecQ-yr-DGa" id="VRA-L1-dRF"/>
-                        <outlet property="photo3" destination="Og2-uv-xaS" id="2jc-fD-BGM"/>
                         <outlet property="photo4" destination="ya0-dD-Xte" id="8Dn-hA-pDj"/>
-                        <outlet property="swipeToShareLabel" destination="eno-ly-Mhk" id="ilN-Vg-zU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
