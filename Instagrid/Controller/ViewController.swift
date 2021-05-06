@@ -20,13 +20,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view.
     
         currentLayout = .one
-        
-        // Swipe for Portrait orientation
+        // Define Swipe for Portrait orientation
         let leftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
         leftSwipeGestureRecognizer.direction = .left
         mainView.addGestureRecognizer(leftSwipeGestureRecognizer)
-        
-        // Swipe for Landscape orientation
+        // Define Swipe for Landscape orientation
         let upSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
         upSwipeGestureRecognizer.direction = .up
         mainView.addGestureRecognizer(upSwipeGestureRecognizer)
@@ -61,14 +59,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // Function valid for the 4 photo buttons
-    @IBAction func addPhoto(_ sender: UIButton ) {
+    @IBAction func addPhoto(_ sender: UIButton) {
         sender.isSelected = true
         currentButton = sender
         chooseImage()
     }
     
-    
-    func updateMainView() {
+    private func updateMainView() {
         let layoutButtons = [layout1, layout2, layout3]
         for button in layoutButtons {
             button?.isSelected = false
@@ -90,7 +87,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // Show action sheet for choose a photo
-    func chooseImage() {
+    private func chooseImage() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
 
@@ -119,12 +116,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.present(actionSheet, animated: true, completion: nil)
     }
 
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        picker.dismiss(animated: true, completion: nil)
-//    }
-
     // Replace image for currentButton (continuity of function chooseImage)
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         currentButton?.setImage((info[UIImagePickerController.InfoKey.originalImage] as! UIImage), for: .normal)
 //        equivalent to: let choosedlmage = (info[UIImagePickerController.InfoKey.originalImage] as! UIImage)
 //        currentButton?.setimage(choosedImage, for .normal)

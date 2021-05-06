@@ -273,7 +273,9 @@
                             <constraint firstItem="h8C-f8-3KX" firstAttribute="top" secondItem="yJh-NQ-g6j" secondAttribute="bottom" constant="15" id="lMV-nm-31u"/>
                             <constraint firstItem="yJh-NQ-g6j" firstAttribute="leading" secondItem="zlR-Pi-m0V" secondAttribute="leading" constant="20" id="mCx-Vl-cC3"/>
                             <constraint firstItem="h8C-f8-3KX" firstAttribute="trailing" secondItem="yJh-NQ-g6j" secondAttribute="trailing" id="mf3-5G-8n4"/>
-                            <constraint firstItem="h8C-f8-3KX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4Re-Zb-TT2" secondAttribute="top" id="mgE-ts-BBe"/>
+                            <constraint firstItem="h8C-f8-3KX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4Re-Zb-TT2" secondAttribute="top" id="mgE-ts-BBe">
+                                <variation key="heightClass=compact-widthClass=compact" constant="15"/>
+                            </constraint>
                             <constraint firstItem="zlR-Pi-m0V" firstAttribute="trailing" secondItem="4Re-Zb-TT2" secondAttribute="trailing" constant="30" id="oEQ-pF-fYP"/>
                             <constraint firstItem="qvR-3g-jSI" firstAttribute="centerX" secondItem="zlR-Pi-m0V" secondAttribute="centerX" id="syD-LI-W2U"/>
                             <constraint firstItem="h8C-f8-3KX" firstAttribute="centerX" secondItem="zlR-Pi-m0V" secondAttribute="centerX" id="yiv-3B-9yA"/>
