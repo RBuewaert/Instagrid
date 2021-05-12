@@ -17,13 +17,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    
         currentLayout = .one
+        
         // Define Swipe for Portrait orientation
         let leftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
         leftSwipeGestureRecognizer.direction = .left
         mainView.addGestureRecognizer(leftSwipeGestureRecognizer)
+        
         // Define Swipe for Landscape orientation
         let upSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
         upSwipeGestureRecognizer.direction = .up
