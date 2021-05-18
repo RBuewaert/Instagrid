@@ -19,12 +19,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         currentLayout = .one
         
-        // Define Swipe for Portrait orientation
+        // Define Swipe for Landscape orientation
         let leftSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
         leftSwipeGestureRecognizer.direction = .left
         mainView.addGestureRecognizer(leftSwipeGestureRecognizer)
         
-        // Define Swipe for Landscape orientation
+        // Define Swipe for Portrait orientation
         let upSwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeToShare(_:)))
         upSwipeGestureRecognizer.direction = .up
         mainView.addGestureRecognizer(upSwipeGestureRecognizer)
@@ -121,7 +121,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         currentButton?.setImage((info[UIImagePickerController.InfoKey.originalImage] as! UIImage), for: .normal)
 //        equivalent to: let choosedlmage = (info[UIImagePickerController.InfoKey.originalImage] as! UIImage)
 //        currentButton?.setimage(choosedImage, for .normal)
-        currentButton?.imageView?.contentMode = . scaleAspectFill
+        currentButton?.imageView?.contentMode = .scaleAspectFill
         currentButton?.contentVerticalAlignment = .fill
         currentButton?.contentHorizontalAlignment = .fill
         picker.dismiss(animated: true, completion: nil)
@@ -168,7 +168,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.present(activityViewController, animated: true, completion: nil)
             
             activityViewController.completionWithItemsHandler = { (type, success, items, error) in
-                UIView.animate(withDuration: 1, animations: {
+                UIView.animate(withDuration: 0.5, animations: {
                     self.mainView.transform = .identity
                 }, completion: nil)
             }
